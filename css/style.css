@@ -1,9 +1,28 @@
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+/* PSEUDO ELEMENT HERE */
+p::first-letter {
+    font-size: 1.5em;
+}
+/* PSEUDO ELEMENT HERE */
+::selection {
+    color: #123913; 
+    background: #bfd7d6;
+}
+/* CSS COMBINATOR HERE */
+h1 ~ p {
+    line-height: 1.3em;
+}
+/* styling for the headers on the history and family tree pages, which includes the title of the site and the navbar*/
 header {
     text-align: center;
     margin: 0;
     padding: 30px 0px 50px;
     background-color: #b1cab5;
 }
+/* CSS COMBINATOR HERE */
 header nav ul {
     padding: 0;
     margin: 0;
@@ -11,6 +30,7 @@ header nav ul {
 header nav ul li {
   display: inline-block;
 }
+/* PSEUDO CLASS HERE */
 header nav ul li:not(:first-child) {
   margin-left: 7px;
 }
@@ -25,18 +45,12 @@ header nav ul li:not(.active) a:hover {
 header nav ul li.active a {
   color: #000;
 }
-
-body {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-}
-
+/* styling for just the home page */
 .index {
   position: relative;
   width: 100%;
   height: 700px;
   background-image: url('https://imgur.com/BQdmPaG.png');
-  /*background-position: center;*/
   background-size: cover;
 }
 .index nav {
@@ -51,6 +65,7 @@ body {
 .index nav ul li {
   display: inline-block;
 }
+/* PSEUDO CLASS HERE */
 .index nav ul li:not(:first-child) {
   margin-left: 10px;
 }
@@ -90,7 +105,12 @@ body {
   padding-right: 30px;
   vertical-align: top;
 }
-
+/* PSEUDO ELEMENT HERE */
+.about .description p::first-line {
+    line-height: 2em;
+    font-size: 1.3em;
+    font-style: italic;
+}
 .about .image {
   display: inline-block;
   width: 29%;
@@ -99,17 +119,20 @@ body {
 }
 .about .description .header {
   margin: 0;
-  /*text-align: right;*/
 }
 
+/* styling for the sections or "stories" on the history pages */
 .story {
     width: 100%;
     box-sizing: border-box;
     padding: 10px 40px;
 }
+
+/* PSEUDO CLASS HERE */
 .story:first-of-type {
-    /*padding: 60px 40px 40px;*/
+    padding: 60px 40px 10px;
 }
+/* PSEUDO CLASS HERE */
 .story:last-of-type {
     padding: 10px 40px 80px;
 }
@@ -119,6 +142,7 @@ body {
     box-sizing: border-box;
     padding: 30px 30px;
 }
+/* CSS COMBINATOR HERE */
 .story-text + .image {
     display: inline-block;
     width: 29%;
@@ -138,21 +162,7 @@ body {
     background-color: #99a1b4;
 }
 
-.about .description p::first-line {
-    line-height: 2em;
-    font-size: 1.3em;
-    font-style: italic;
-}
-
-p::first-letter {
-    font-size: 1.5em;
-}
-
-::selection {
-    color: #123913; 
-    background: #bfd7d6;
-}
-
+/* Styling for the footer of every page */
 footer {
   text-align: center;
   background-color: #55755f;
@@ -164,6 +174,7 @@ footer ul {
 footer ul li {
   display: inline-block;
 }
+/* CSS COMBINATOR HERE */
 li > .icon {
     display: block;
     margin: 5px;
@@ -194,18 +205,16 @@ li > .icon {
     background-repeat: no-repeat;
 }
 
+/* CSS ATTRIBUTE SELECTOR HERE */
 a[target="_blank"] {
     background-color: #bfd7d6;
 }
-
+/* CSS ATTRIBUTE SELECTOR HERE */
 [class|="header"] {
     letter-spacing: 0.1em;
 }
- 
-h1 ~ p {
-    line-height: 1.3em;
-}
 
+/* styling for the family tree page which has yet to be fully implemented */
 .tree {
     box-sizing: border-box;
     padding: 30px;
