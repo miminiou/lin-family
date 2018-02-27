@@ -2,7 +2,7 @@ header {
     text-align: center;
     margin: 0;
     padding: 30px 0px 50px;
-    background-color: lightblue;
+    background-color: #b1cab5;
 }
 header nav ul {
     padding: 0;
@@ -97,7 +97,6 @@ body {
   padding-top: 20%;
   background-color: grey;
 }
-
 .about .description .header {
   margin: 0;
   /*text-align: right;*/
@@ -126,19 +125,22 @@ body {
 }
 .story.one .image {
     height: 200px;
-    background-color: grey;
+    background-color: #bfd7d6;
 }
 .story.two .image {
     height: 200px;
-    background-color: grey;
+    background-color: #bcc0c3;
 }
 .story.three .image {
     height: 200px;
-    background-color: grey;
+    /*background-color: #ae9d8b;*/ /*brown color: */
+    /*background-color: #b1cab5;*/ /*light green */
+    background-color: #99a1b4;
 }
 
 .about .description p::first-line {
     line-height: 2em;
+    font-size: 1.3em;
     font-style: italic;
 }
 
@@ -147,13 +149,13 @@ p::first-letter {
 }
 
 ::selection {
-    color: red; 
-    background: pink;
+    color: #123913; 
+    background: #bfd7d6;
 }
 
 footer {
   text-align: center;
-  background-color: lightblue;
+  background-color: #55755f;
   padding: 15px 0px 20px;
 }
 footer ul {
@@ -193,7 +195,7 @@ li > .icon {
 }
 
 a[target="_blank"] {
-    background-color: lightsteelblue;
+    background-color: #bfd7d6;
 }
 
 [class|="header"] {
@@ -204,5 +206,10 @@ h1 ~ p {
     line-height: 1.3em;
 }
 
-
+.tree {
+    box-sizing: border-box;
+    padding: 30px;
+    margin: 100px 0px;
+    text-align: center;
+}
 
