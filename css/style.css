@@ -37,6 +37,7 @@ header nav ul li:not(:first-child) {
 header nav ul li a {
   text-decoration: none;
   font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
   color: #fff;
 }
 header nav ul li:not(.active) a:hover {
@@ -71,6 +72,7 @@ header nav ul li.active a {
 }
 .index nav ul li a {
   text-decoration: none;
+  font-size: 1.1em;
   color: #fff;
 }
 .index nav ul li:not(.active) a:hover {
