@@ -206,8 +206,9 @@ li > .icon {
 }
 
 /* CSS ATTRIBUTE SELECTOR HERE */
-a[target="_blank"] {
-    background-color: #bfd7d6;
+a[target="_blank"]:hover {
+    /*background-color: #bfd7d6;*/
+    background-image: url("../images/fb-icon.svg")
 }
 /* CSS ATTRIBUTE SELECTOR HERE */
 [class|="header"] {
