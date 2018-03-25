@@ -2,16 +2,25 @@ body {
     margin: 0;
     font-family: 'Cormorant Garamond', serif;
 }
+/* PSEUDO ELEMENT HERE */
+/*p::first-letter {
+    font-size: 1.5em;
+}*/
+/* PSEUDO ELEMENT HERE */
 ::selection {
     color: #123913; 
     background: #bfd7d6;
 }
+/* CSS COMBINATOR HERE */
+/*h1 ~ p {
+    line-height: 1.3em;
+}*/
 /* styling for the headers on the history and family tree pages, which includes the title of the site and the navbar*/
 header {
     text-align: center;
     margin: 0;
     padding: 30px 0px 50px;
-    background-color: #CCDAD4;
+    background-color: #b1cab5;
 }
 nav {
   width: fit-content;
@@ -82,42 +91,81 @@ header nav ul li.active a {
   font-size: 3em;
   color: #ddd;
 }
-.content {
-  max-width: 1200px;
-  margin: 50px auto;
+
+.about {
+  box-sizing: border-box;
+  padding: 50px 100px;
+  margin: 30px 0px;
 }
-.about.image {
+
+.about .description {
+  display: inline-block;
+  width: 70%;
   height: 100%;
-  min-height: 200px;
-  width: 100%;
-  background-color: #ffffeb;
+  box-sizing: border-box;
+  padding-right: 30px;
+  vertical-align: top;
+}
+/* PSEUDO ELEMENT HERE */
+/*.about .description p::first-line {
+    line-height: 2em;
+    font-size: 1.3em;
+    font-style: italic;
+}*/
+.about .image {
+  display: inline-block;
+  width: 29%;
+  padding-top: 20%;
+  background-color: grey;
+}
+.about .description .header {
+  margin: 0;
 }
 
 /* styling for the sections or "stories" on the history pages */
-.story.row {
-    margin: 50px auto;
+.story {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    text-align: center;
 }
-.story .image {
-  height: 100%;
-  min-height: 200px;
-}
+
 .story:first-of-type {
-    padding-top: 20px;
+    padding: 60px 40px 10px;
+}
+.story:last-of-type {
+    padding: 10px 40px 80px;
+}
+.story-text {
+    display: inline-block;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+/* CSS COMBINATOR HERE */
+.story .image {
+    display: inline-block;
+    width: 40%;
 }
 .story.one .image {
-    background-color: #ffffeb;
+    height: 300px;
+    background-color: #bfd7d6;
 }
 .story.two .image {
-    background-color: #55755f;
+    height: 300px;
+    background-color: #bcc0c3;
 }
 .story.three .image {
-    background-color: #b1cab5;
+    height: 300px;
+    /*background-color: #ae9d8b;*/ /*brown color: */
+    /*background-color: #b1cab5;*/ /*light green */
+    background-color: #99a1b4;
 }
 
 /* Styling for the footer of every page */
 footer {
   text-align: center;
-  background-color: #CCDAD4;
+  background-color: #55755f;
   padding: 15px 0px 20px;
 }
 footer ul {
