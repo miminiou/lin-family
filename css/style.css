@@ -1,6 +1,22 @@
-body {
-    margin: 0;
+h1, h2, h3, .copyright {
+  margin: 0;
     font-family: 'Cormorant Garamond', serif;
+}
+h1 {
+  font-size: 20pt;
+}
+h2 {
+  font-size: 18pt;
+}
+h3 {
+  font-size: 16pt;
+}
+p {
+  font-family: 'Pontano Sans', serif;
+  letter-spacing: .03em;
+}
+.form-contact-me {
+  font-family: 'Pontano Sans', serif;
 }
 ::selection {
     color: #123913; 
@@ -35,6 +51,7 @@ header nav ul li:not(:first-child) {
 header nav ul li a {
   text-decoration: none;
   font-family: 'Cormorant Garamond', serif;
+  /*font-family: 'Assistant', sans-serif;*/
   font-size: 1.1em;
   color: #fff;
 }
@@ -95,6 +112,9 @@ header nav ul li.active a {
   min-height: 200px;
   width: 100%;
   background-color: #ffffeb;
+}
+h1, h2 {
+  margin: 3% 0;
 }
 
 /* styling for the sections or "stories" on the history pages */
