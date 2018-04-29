@@ -179,3 +179,49 @@ li > .icon {
     text-align: center;
 }
 
+/* Contact form */
+.form-contact-me {
+  width: 33.33%;
+  max-width: 500px;
+}
+.form-contact-me .errors {
+  white-space: pre-line;
+  color: #e84b66;
+}
+.form-contact-me fieldset input,
+.form-contact-me fieldset textarea,
+.form-contact-me button {
+  width: 100% !important;
+}
+.form-contact-me fieldset textarea {
+  height: 150px;
+}
+.form-contact-me button {
+  background-color: #55755f;
+}
+
+/*Family Table*/
+.container-family-table {
+  width: 33.33%;
+  margin: 5% auto;
+}
+.family-table {
+  width: 100%;
+}
+.container-family-table .form-search .searchbar {
+  width: 50%;
+}
+.container-family-table .form-search .searchbar:focus {
+  outline: none;
+  border-color: #55755f !important;
+}
+.container-family-table table th {
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.container-family-table table th:hover {
+  background-color: #c8c8c8;
+}
+
+
+

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Lin Family - Family Tree</title>
+	<title>Lin Family - Contact</title>
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -11,65 +11,56 @@
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="js/members.js"></script>
-	<script src="js/familytree.js"></script>
+	<script src="js/contact.js"></script>
 
 	<meta name="robots" content="noindex" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
 	<header>
-		<h1 class="header">Lin Family</h1>
+	  <h1 class="header">Lin Family</h1>
 	  <nav class="navbar">
 		<ul>
 		  <li><a href="./index.html">Home</a></li>
 		  <li><a href="./history.html">History</a></li>
-		  <li class="active"><a href="./familytree.html">Family Tree</a></li>
-		  <li><a href="./contact.html">Contact</a></li>
+		  <li><a href="./familytree.html">Family Tree</a></li>
+		  <li class="active"><a href="./contact.html">Contact</a></li>
 		</ul>
 	  </nav>
 	</header>
-	<div class="content container-fluid container-family-table">
-		<h1>Family Tree</h1>
-		<form class="pure-form form-search">
-			<input type="text" class="pure-input searchbar" placeholder="Search" 
-				v-model="search_term">
-		    <label class="pure-radio">
-		        <input type="radio" name="optionsRadios" value="option1" checked
-		        	v-on:click="filter_setting = 'generational'">
-		        Generational
-		    </label>
-		    <label class="pure-radio">
-		        <input 
-		        	type="radio" 
-		        	name="optionsRadios" 
-		        	value="option2"
-		        	v-on:click="filter_setting = 'alphabetical'">
-		        Alphabetical
-		    </label>
-	   	</form>
-		<table class="pure-table family-table">
-			<thead>
-				<tr>
-					<th v-on:click="filter_setting = 'generational'">Gen</th>
-					<th v-on:click="filter_setting = 'alphabetical'">Name</th>
-				</tr>
-			</thead>
 
-			<tbody>
-				<tr
-					v-for="(member, index) in processMembers()"
-					v-bind:class="{ 'pure-table-odd': index % 2 == 1 }">
-					<td>
-						{{ member.gen }}
-					</td>
-					<td>
-						{{ member.name }}
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+	<form
+		class="pure-form content container-fluid form-contact-me"
+		onsubmit="return form.validate();">
+		<h2>Contact Me</h2>
+		<p class="errors" v-if="errors.length != 0">
+			{{ errors.join('\n') }}
+		</p>
+		<fieldset class="pure-group">
+			<input
+				type="text"
+				class="pure-input-1-2"
+				placeholder="Name"
+				v-model="name">
+			<input
+				type="email"
+				class="pure-input-1-2"
+				placeholder="Email"
+				v-model="email">
+		</fieldset>
+		<fieldset class="pure-group">
+			<input
+				type="text"
+				class="pure-input-1-2"
+				placeholder="Subject"
+				v-model="subject">
+			<textarea
+				class="pure-input-1-2"
+				placeholder="Comment"
+				v-model="comment"></textarea>
+		</fieldset>
+		<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>
+	</form>
 	<footer>
 	  <h3 class="header">Contact Me</h3>
 	  <ul class="icons">
