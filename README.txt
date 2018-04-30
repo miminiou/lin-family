@@ -10,7 +10,8 @@ Stylesheets can be found in the "css" folder.
 ***Mini Project 4 Additions***
 
 PART C: Javascript Functionality
-*All on page "familytree.html" and all use vue.js and pure css for styling
+*On page "familytree.html"
+*Use vue.js and pure css for styling
 	1 - Filter table
 		If you start typing into the search bar, the table of family members will be dynamically filtered, and show only the ones with names matching part or all of your searched term.
 	2 - Table sorting by clicking on the table headers
