@@ -1,4 +1,4 @@
-This folder contains the html pages, "index.html," "history.html," "contact.html," and "familytree.html" which make up the site found at miminiou.github.io/lin-family
+This folder contains the html pages, "index.html," "history.html," "contact.html," and "familytree.html" which make up the site found at [miminiou.github.io/lin-family](miminiou.github.io/lin-family)
 This website is a family website which contains information about my mom's family's history, and its members.
 
 Bootstrap is used for the layout (container, row, column) and navbar of all pages.
